@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             const expenseItem = document.createElement('div');
             expenseItem.className = 'expense-item';
-            expenseItem.innerHTML = `<strong>${data.description}:</strong> $${data.amount}`;
+            expenseItem.innerHTML = `<strong>${data.description}:</strong> ₹${data.amount}`;
             expenseList.appendChild(expenseItem);
         })
         .catch(error => console.error('Error:', error));
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             data.forEach(expense => {
                 const expenseItem = document.createElement('div');
                 expenseItem.className = 'expense-item';
-                expenseItem.innerHTML = `<strong>${expense.description}:</strong> $${expense.amount}`;
+                expenseItem.innerHTML = `<strong>${expense.description}:</strong> ₹${expense.amount}`;
                 expenseList.appendChild(expenseItem);
             });
         })
